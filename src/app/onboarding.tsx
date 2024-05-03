@@ -30,7 +30,7 @@ export default function Onboarding() {
           </Link>
         </View>
         <View className="mt-16 gap-2 text-center">
-          <Button title="Get Started " onPress={() => router.push('/login')} />
+          <Button title="Get Started " onPress={() => router.push('/get-started')} />
         </View>
       </Container>
     </>
