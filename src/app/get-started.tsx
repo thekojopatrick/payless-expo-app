@@ -1,14 +1,17 @@
 import { Link, Stack, router } from 'expo-router';
 import { Platform, View, Text, useWindowDimensions } from 'react-native';
 
+import AuthBottomSheet from '../components/AuthBottomModal';
+import { OutlineButton } from '../components/OutlineButton';
+
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { GoogleAuthButton } from '@/components/GoogleAuthButton';
+import { useSheetRef } from '@/ui/Sheet';
 import { CreditCardSvg } from '@/ui/icons';
-import { OutlineButton } from '../components/OutlineButton';
 
 export default function GetStarted() {
   const dimension = useWindowDimensions();
+
   return (
     <>
       <Stack.Screen options={{ title: 'Get Started', headerShown: false }} />
@@ -27,15 +30,12 @@ export default function GetStarted() {
         </View>
         <View className="mt-16 flex-row gap-2 text-center">
           <View className="basis-1/2">
-            <Button title="Login" onPress={() => router.push('/(auth)/login')} />
+            <AuthBottomSheet />
           </View>
           <View className="basis-1/2">
             <OutlineButton title="Sign up" onPress={() => router.push('/(auth)/register')} />
           </View>
         </View>
-        {/* <View className="gap-2 text-center">
-          <GoogleAuthButton onPress={() => router.push('/modal')} />
-        </View> */}
       </Container>
     </>
   );
