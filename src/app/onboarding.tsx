@@ -1,10 +1,12 @@
 import { Link, Stack, router } from 'expo-router';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Platform } from 'react-native';
+
+import Wallet from '../../assets/wallet.svg';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+//import { CreditCardSvg } from '@/ui/icons';
 
-//const logo = require('../../assets/icon.png');
 export default function Onboarding() {
   return (
     <>
@@ -16,8 +18,18 @@ export default function Onboarding() {
         }}
       />
       <Container>
-        <Text className="text-primary text-center text-xl font-bold">Payless</Text>
-        <View className="mt-auto gap-2 text-center">
+        <Text className="text-primary text-center text-xl font-bold text-primary-600">Payless</Text>
+        <View className="my-auto items-center justify-center pt-10">
+          <Wallet />
+          {/* <CreditCardSvg /> */}
+        </View>
+        <View className="mt-auto items-center gap-2 pt-16">
+          <Text className={styles.heroTitle}>Pay,Send and Receive Money from Anywhere</Text>
+          <Link href="/modal" className="text-center text-primary-600">
+            Terms and Conditions Apply
+          </Link>
+        </View>
+        <View className="mt-16 gap-2 text-center">
           <Button title="Get Started " onPress={() => router.push('/login')} />
         </View>
       </Container>
@@ -25,8 +37,6 @@ export default function Onboarding() {
   );
 }
 
-const styles = StyleSheet.create({
-  image: {
-    width: 96,
-  },
-});
+const styles = {
+  heroTitle: `text-primary w-[90%] text-center font-semibold ${Platform.OS === 'ios' ? 'text-3xl' : 'text-5xl'}`,
+};
