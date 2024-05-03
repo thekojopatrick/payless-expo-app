@@ -11,12 +11,12 @@ export const GoogleAuthButton = forwardRef<TouchableOpacity, ButtonProps>(({ onP
   return (
     <TouchableOpacity ref={ref} className={styles.button} onPress={onPress}>
       <Google width={32} height={32} />
-      <Text className={styles.buttonText}>Sign in with Google</Text>
+      <Text className={styles.buttonText}>Continue with Google</Text>
     </TouchableOpacity>
   );
 });
 
 const styles = {
-  button: 'items-center gap-4 justify-center rounded-full p-4 border border-primary-600 flex-row',
+  button: 'items-center gap-4 justify-center rounded-full p-4 border  border-charcoal-100 flex-row',
   buttonText: 'text-lg font-semibold text-center',
 };
