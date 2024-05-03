@@ -5,15 +5,17 @@ import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { GoogleAuthButton } from '@/components/GoogleAuthButton';
 import { CreditCardSvg } from '@/ui/icons';
+import { OutlineButton } from '../components/OutlineButton';
 
 export default function GetStarted() {
   const dimension = useWindowDimensions();
   return (
     <>
-      <Stack.Screen options={{ title: 'Get Started' }} />
-
+      <Stack.Screen options={{ title: 'Get Started', headerShown: false }} />
       <Container>
-        <Text className="text-primary text-center text-xl font-bold text-primary-600">Payless</Text>
+        <Text className="text-primary text-center text-xl font-bold text-primary-600">
+          Welcome to Payless
+        </Text>
         <View className="my-auto items-center justify-center pt-10">
           <CreditCardSvg width={dimension.width / 1.2} />
         </View>
@@ -23,22 +25,22 @@ export default function GetStarted() {
             Terms and Conditions Apply
           </Link>
         </View>
-        <View className="mb-4 mt-16 flex-row gap-2 text-center">
+        <View className="mt-16 flex-row gap-2 text-center">
           <View className="basis-1/2">
             <Button title="Login" onPress={() => router.push('/(auth)/login')} />
           </View>
           <View className="basis-1/2">
-            <Button title="Register" onPress={() => router.push('/(auth)/register')} />
+            <OutlineButton title="Sign up" onPress={() => router.push('/(auth)/register')} />
           </View>
         </View>
-        <View className="gap-2 text-center">
+        {/* <View className="gap-2 text-center">
           <GoogleAuthButton onPress={() => router.push('/modal')} />
-        </View>
+        </View> */}
       </Container>
     </>
   );
 }
 
 const styles = {
-  heroTitle: `text-primary w-[80%] text-center font-semibold ${Platform.OS === 'ios' ? 'text-3xl' : 'text-5xl'}`,
+  heroTitle: `text-primary w-[80%] text-center font-medium ${Platform.OS === 'ios' ? 'text-3xl' : 'text-4xl'}`,
 };

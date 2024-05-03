@@ -5,7 +5,6 @@ import Wallet from '../../assets/wallet.svg';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-//import { CreditCardSvg } from '@/ui/icons';
 
 export default function Onboarding() {
   return (
@@ -18,10 +17,11 @@ export default function Onboarding() {
         }}
       />
       <Container>
-        <Text className="text-primary text-center text-xl font-bold text-primary-600">Payless</Text>
+        <Text className="text-primary text-center text-xl font-bold text-primary-600">
+          Welcome to Payless
+        </Text>
         <View className="my-auto items-center justify-center pt-10">
           <Wallet />
-          {/* <CreditCardSvg /> */}
         </View>
         <View className="mt-auto items-center gap-2 pt-16">
           <Text className={styles.heroTitle}>Pay,Send and Receive Money from Anywhere</Text>
@@ -38,5 +38,5 @@ export default function Onboarding() {
 }
 
 const styles = {
-  heroTitle: `text-primary w-[90%] text-center font-semibold ${Platform.OS === 'ios' ? 'text-3xl' : 'text-5xl'}`,
+  heroTitle: `text-primary w-[90%] text-center font-medium ${Platform.OS === 'ios' ? 'text-3xl' : 'text-4xl'}`,
 };

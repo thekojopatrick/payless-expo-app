@@ -2,6 +2,7 @@
 import '../../global.css';
 
 import { useReactNavigationDevTools } from '@dev-plugins/react-navigation';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { ThemeProvider } from '@react-navigation/native';
 import { SplashScreen, Stack, useNavigationContainerRef } from 'expo-router';
 import { StyleSheet } from 'react-native';
@@ -41,7 +42,9 @@ function Providers({ children }: { children: React.ReactNode }) {
   const theme = useThemeConfig();
   return (
     <GestureHandlerRootView style={styles.container} className={theme.dark ? `light` : undefined}>
-      <ThemeProvider value={theme}>{children}</ThemeProvider>
+      <BottomSheetModalProvider>
+        <ThemeProvider value={theme}>{children}</ThemeProvider>
+      </BottomSheetModalProvider>
     </GestureHandlerRootView>
   );
 }

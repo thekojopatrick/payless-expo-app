@@ -18,5 +18,5 @@ export const OutlineButton = forwardRef<TouchableOpacity, ButtonProps>(
 
 const styles = {
   button: 'items-center rounded-[28px] p-4 border border-primary-600',
-  buttonText: 'text-lg font-semibold text-center',
+  buttonText: 'text-lg font-semibold text-center text-primary-600',
 };
