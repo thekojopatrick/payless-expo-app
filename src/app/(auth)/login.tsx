@@ -1,5 +1,5 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { Link, Stack, router } from 'expo-router';
+import { View, Text } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
@@ -9,21 +9,17 @@ export default function Login() {
   return (
     <>
       <Stack.Screen options={{ title: 'Login' }} />
-      <View style={styles.container}>
-        <Container>
-          <ScreenContent path="app/index.tsx" title="Login" />
-          <Link href={{ pathname: '/(app)/', params: { name: 'Dan' } }} asChild>
-            <Button title="Login" onPress={() => {}} />
+      <Container>
+        <ScreenContent path="app/index.tsx" title="Login" />
+
+        <View className="w-full gap-4 text-center">
+          <Button title="Continue" onPress={() => router.push('/(app)/')} />
+          <Link className="text-center" href="/(auth)/register">
+            <Text className="pr-2">Don't have an account?</Text>
+            <Text className="font-medium text-primary-600"> Register</Text>
           </Link>
-        </Container>
-      </View>
+        </View>
+      </Container>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-});
