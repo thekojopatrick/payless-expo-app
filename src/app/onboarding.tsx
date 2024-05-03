@@ -5,6 +5,7 @@ import Wallet from '../../assets/wallet.svg';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
+import { PrimaryLogo } from '@/ui/icons';
 
 export default function Onboarding() {
   return (
@@ -17,10 +18,13 @@ export default function Onboarding() {
         }}
       />
       <Container>
-        <Text className="text-primary text-center text-xl font-bold text-primary-600">
-          Welcome to Payless
-        </Text>
-        <View className="my-auto items-center justify-center pt-10">
+        <View className="items-center gap-2">
+          <PrimaryLogo />
+          <Text className="text-primary text-center text-xl font-bold text-primary-600">
+            Welcome to Payless
+          </Text>
+        </View>
+        <View className="my-auto flex-1 items-center justify-center pt-10">
           <Wallet />
         </View>
         <View className="mt-auto items-center gap-2 pt-16">

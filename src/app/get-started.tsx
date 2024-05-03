@@ -1,27 +1,31 @@
-import { Link, Stack, router } from 'expo-router';
-import { Platform, View, useWindowDimensions } from 'react-native';
+import { Stack, router } from 'expo-router';
+import { Platform, View } from 'react-native';
 
-import AuthBottomSheet from '../components/AuthBottomModal';
-import { OutlineButton } from '../components/OutlineButton';
+import PhoneSvg from '../../assets/phone.svg';
 
+import AuthBottomSheet from '@/components/AuthBottomModal';
 import { Container } from '@/components/Container';
+import { OutlineButton } from '@/components/OutlineButton';
 import { Text } from '@/ui/Text';
-import { CreditCardSvg } from '@/ui/icons';
+import { PrimaryLogo } from '@/ui/icons';
 
 export default function GetStarted() {
-  const dimension = useWindowDimensions();
-
   return (
     <>
       <Stack.Screen options={{ title: 'Get Started', headerShown: false }} />
       <Container>
-        <Text variant="subhead" className="text-primary text-center font-bold text-primary-600">
-          Welcome to Payless
-        </Text>
-        <View className="my-auto items-center justify-center pt-4">
-          <CreditCardSvg width={dimension.width / 1.2} />
+        <View className="items-center">
+          <PrimaryLogo />
         </View>
-        <View className="my-auto items-center gap-4 pb-16">
+        <View className="flex-1 items-center justify-center pt-4">
+          <PhoneSvg />
+        </View>
+        <View className="my-auto items-center gap-4 pb-4">
+          <Text
+            variant="title3"
+            className="text-primary text-center font-semibold text-primary-600">
+            Welcome to Payless
+          </Text>
           <Text variant="largeTitle" className="text-center font-semibold">
             One App For All Your Transactions
           </Text>
@@ -40,11 +44,11 @@ export default function GetStarted() {
             <OutlineButton title="Sign up" onPress={() => router.push('/(auth)/register')} />
           </View>
         </View>
-        <Link href="/modal" asChild>
+        {/* <Link href="/modal" asChild>
           <Text variant="body" className="mt-4 text-center text-primary-600">
             Terms and Conditions Apply
           </Text>
-        </Link>
+        </Link> */}
       </Container>
     </>
   );
