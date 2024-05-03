@@ -23,7 +23,12 @@ function AuthBottomSheet() {
                 bottomSheetModalRef.current?.close();
               }}
             />
-            <GoogleAuthButton onPress={() => router.push('/modal')} />
+            <GoogleAuthButton
+              onPress={() => {
+                router.push('/modal');
+                bottomSheetModalRef.current?.close();
+              }}
+            />
             <Text variant="footnote" className="text-center">
               By logging in, you agree with our Terms of Service and Privacy Policy{' '}
             </Text>
