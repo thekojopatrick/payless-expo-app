@@ -15,6 +15,6 @@ export const Button = forwardRef<TouchableOpacity, ButtonProps>(({ onPress, titl
 });
 
 const styles = {
-  button: 'items-center bg-indigo-500 rounded-[28px] shadow-md p-4',
+  button: 'items-center bg-primary-500 rounded-[28px] p-4',
   buttonText: 'text-white text-lg font-semibold text-center',
 };
