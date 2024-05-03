@@ -24,10 +24,10 @@ export default function GetStarted() {
         </View>
         <View className="mb-4 mt-16 flex-row gap-2 text-center">
           <View className="basis-1/2">
-            <Button title="Login" onPress={() => router.push('/login')} />
+            <Button title="Login" onPress={() => router.push('/(auth)/login')} />
           </View>
           <View className="basis-1/2">
-            <Button title="Register" onPress={() => router.push('/get-started')} />
+            <Button title="Register" onPress={() => router.push('/(auth)/register')} />
           </View>
         </View>
         <View className="gap-2 text-center">
