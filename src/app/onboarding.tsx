@@ -1,22 +1,32 @@
-import { Link, Stack } from 'expo-router';
-import { View } from 'react-native';
+import { Link, Stack, router } from 'expo-router';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { ScreenContent } from '@/components/ScreenContent';
 
+//const logo = require('../../assets/icon.png');
 export default function Onboarding() {
   return (
     <>
-      <Stack.Screen options={{ title: 'Onboarding' }} />
-      <View className="p-6">
-        <Container>
-          <ScreenContent path="app/index.tsx" title="Onboarding" />
-          <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-            <Button title="Show Details" onPress={() => {}} />
-          </Link>
-        </Container>
-      </View>
+      <Stack.Screen
+        options={{
+          title: 'Onboarding',
+          animationTypeForReplace: 'pop',
+          animation: 'fade',
+        }}
+      />
+      <Container>
+        <Text className="text-primary text-center text-xl font-bold">Payless</Text>
+        <View className="mt-auto gap-2 text-center">
+          <Button title="Get Started " onPress={() => router.push('/login')} />
+        </View>
+      </Container>
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  image: {
+    width: 96,
+  },
+});

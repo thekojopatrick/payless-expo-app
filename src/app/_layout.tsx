@@ -10,9 +10,9 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useThemeConfig } from '@/core/use-theme-config';
 export { ErrorBoundary } from 'expo-router';
 
-export const unstable_settings = {
-  initialRouteName: '(app)',
-};
+// export const unstable_settings = {
+//   initialRouteName: '(app)',
+// };
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 //SplashScreen.preventAutoHideAsync();
@@ -26,7 +26,7 @@ export default function RootLayout() {
 function RootLayoutNav() {
   return (
     <Providers>
-      <Stack initialRouteName="onboarding">
+      <Stack initialRouteName="splash">
         <Stack.Screen name="(app)" options={{ headerShown: false }} />
         <Stack.Screen name="onboarding" options={{ headerShown: false }} />
         <Stack.Screen name="login" options={{ headerShown: false }} />
