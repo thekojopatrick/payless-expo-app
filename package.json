@@ -15,6 +15,7 @@
     "@expo/vector-icons": "^14.0.0",
     "@gorhom/bottom-sheet": "^4.6.1",
     "@react-navigation/native": "^6.1.7",
+    "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "expo": "latest",
     "expo-constants": "~15.4.5",

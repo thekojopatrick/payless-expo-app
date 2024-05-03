@@ -31,14 +31,14 @@ const Sheet = React.forwardRef<
       style={
         style ?? {
           borderWidth: 1,
-          borderColor: colors.text,
+          borderColor: colors.border,
           borderTopStartRadius: 16,
           borderTopEndRadius: 16,
         }
       }
       handleIndicatorStyle={
         handleIndicatorStyle ?? {
-          backgroundColor: colors.text,
+          backgroundColor: colors.border,
         }
       }
       backdropComponent={renderBackdrop}

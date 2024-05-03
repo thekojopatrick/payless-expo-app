@@ -28,7 +28,7 @@ export default function Splash() {
           animation: 'fade',
         }}
       />
-      <View className="bg-primary-600 flex flex-1 items-center justify-center p-4">
+      <View className="flex flex-1 items-center justify-center bg-primary-600 p-4">
         <View className="mt-auto">
           <Image
             source={logo}
