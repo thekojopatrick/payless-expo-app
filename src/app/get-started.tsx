@@ -1,5 +1,5 @@
 import { Link, Stack, router } from 'expo-router';
-import { Platform, View, Text } from 'react-native';
+import { Platform, View, Text, useWindowDimensions } from 'react-native';
 
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
@@ -7,6 +7,7 @@ import { GoogleAuthButton } from '@/components/GoogleAuthButton';
 import { CreditCardSvg } from '@/ui/icons';
 
 export default function GetStarted() {
+  const dimension = useWindowDimensions();
   return (
     <>
       <Stack.Screen options={{ title: 'Get Started' }} />
@@ -14,7 +15,7 @@ export default function GetStarted() {
       <Container>
         <Text className="text-primary text-center text-xl font-bold text-primary-600">Payless</Text>
         <View className="my-auto items-center justify-center pt-10">
-          <CreditCardSvg />
+          <CreditCardSvg width={dimension.width / 1.2} />
         </View>
         <View className="mt-auto items-center gap-2 pt-16">
           <Text className={styles.heroTitle}>One App For All Your Transactions</Text>

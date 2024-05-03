@@ -13,7 +13,7 @@ export default function Login() {
         <ScreenContent path="app/index.tsx" title="Login" />
 
         <View className="w-full gap-4 text-center">
-          <Button title="Continue" onPress={() => router.push('/(app)/')} />
+          <Button title="Continue" onPress={() => router.push('/account-status')} />
           <Link className="text-center" href="/(auth)/register">
             <Text className="pr-2">Don't have an account?</Text>
             <Text className="font-medium text-primary-600"> Register</Text>

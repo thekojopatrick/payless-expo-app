@@ -1,18 +1,15 @@
-import { Link, Stack } from 'expo-router';
+import { Link, Stack, useLocalSearchParams } from 'expo-router';
 
-import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { ScreenContent } from '@/components/ScreenContent';
 
 export default function Home() {
+  const { name } = useLocalSearchParams();
   return (
     <>
       <Stack.Screen options={{ title: 'Home' }} />
       <Container>
-        <ScreenContent path="app/index.tsx" title="Home" />
-        <Link href={{ pathname: '/(app)/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" onPress={() => {}} />
-        </Link>
+        <ScreenContent path="app/index.tsx" title={`Showing details for user ${name}`} />
       </Container>
     </>
   );
