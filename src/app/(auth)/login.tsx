@@ -1,8 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { Link, Stack, router } from 'expo-router';
-import { View, Text, Pressable } from 'react-native';
+import { View, Pressable } from 'react-native';
 
+import { GoogleAuthButton } from '@/components/GoogleAuthButton';
 import LoginForm from '@/components/LoginForm';
+import { Text } from '@/ui';
 import { PrimaryLogo } from '@/ui/icons';
 
 export default function Login() {
@@ -13,6 +15,7 @@ export default function Login() {
           title: '',
           headerLargeTitleShadowVisible: false,
           headerBackTitleVisible: false,
+          headerShadowVisible: false,
           headerLeft: () => (
             <Pressable onPress={() => router.back()}>
               {({ pressed }) => (
@@ -28,13 +31,15 @@ export default function Login() {
         }}
       />
       <>
-        <View className="flex flex-1 justify-start gap-2 p-4">
+        <View className="flex flex-1 gap-2 p-4">
           <PrimaryLogo />
           <LoginForm />
-          <View className="w-full gap-4 text-center">
-            <Link className="text-center" href="/(auth)/register">
-              <Text className="pr-2">Don't have an account?</Text>
-              <Text className="font-medium text-primary-600"> Register</Text>
+          <View className="mb-6 mt-auto w-full gap-3 text-center">
+            <Text variant="subhead" className="text-center">
+              Or log in with
+            </Text>
+            <Link href="/(auth)/register" asChild>
+              <GoogleAuthButton onPress={() => {}} />
             </Link>
           </View>
         </View>

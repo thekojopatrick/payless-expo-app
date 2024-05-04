@@ -13,6 +13,7 @@ export default function Register() {
           title: '',
           headerLargeTitleShadowVisible: false,
           headerBackTitleVisible: false,
+          headerShadowVisible: false,
           headerLeft: () => (
             <Pressable onPress={() => router.back()}>
               {({ pressed }) => (
