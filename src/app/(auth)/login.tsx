@@ -30,20 +30,19 @@ export default function Login() {
           ),
         }}
       />
-      <>
-        <View className="flex flex-1 gap-2 p-4">
-          <PrimaryLogo />
-          <LoginForm />
-          <View className="mb-6 mt-auto w-full gap-3 text-center">
-            <Text variant="subhead" className="text-center">
-              Or log in with
-            </Text>
-            <Link href="/modal" asChild>
-              <GoogleAuthButton onPress={() => {}} />
-            </Link>
-          </View>
+
+      <View className="flex flex-1 gap-2 p-4">
+        <PrimaryLogo />
+        <LoginForm />
+        <View className="mb-6 mt-auto w-full gap-3 text-center">
+          <Text variant="subhead" className="text-center">
+            Or log in with
+          </Text>
+          <Link href="/modal" asChild>
+            <GoogleAuthButton onPress={() => {}} />
+          </Link>
         </View>
-      </>
+      </View>
     </>
   );
 }

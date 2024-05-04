@@ -28,11 +28,10 @@ export default function Register() {
           ),
         }}
       />
-
       <View className="flex flex-1 justify-start gap-2 p-4">
         <PrimaryLogo />
         <RegisterForm />
-        <View className="w-full gap-4 text-center">
+        <View className="mb-4 w-full text-center">
           <Link className="text-center" href="/(auth)/login">
             <Text className="pr-2">Already have an account?</Text>
             <Text className="font-medium text-primary-600"> Login</Text>
