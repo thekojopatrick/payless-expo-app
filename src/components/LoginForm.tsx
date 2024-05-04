@@ -54,7 +54,7 @@ const LoginForm = () => {
           onPress={() => router.push('/account-status')}
         />
         <View className="my-2 text-center">
-          <Link href="/(auth)/register" asChild>
+          <Link href="/modal" asChild>
             <Text variant="subhead" className="text-center font-medium text-primary-600 underline">
               Forgotten Password?
             </Text>

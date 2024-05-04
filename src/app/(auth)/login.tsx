@@ -38,7 +38,7 @@ export default function Login() {
             <Text variant="subhead" className="text-center">
               Or log in with
             </Text>
-            <Link href="/(auth)/register" asChild>
+            <Link href="/modal" asChild>
               <GoogleAuthButton onPress={() => {}} />
             </Link>
           </View>
