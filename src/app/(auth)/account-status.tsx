@@ -25,7 +25,7 @@ export default function AccountCreated() {
           </View>
           <View className="mt-auto w-full gap-4 text-center">
             <Link replace href={{ pathname: '/(app)/', params: { name: 'Kojo' } }} asChild>
-              <Button title="Continue" onPress={() => router.replace('/(app)/')} />
+              <Button title="Continue" onPress={() => router.navigate('/(app)/')} />
             </Link>
           </View>
         </View>
