@@ -13,7 +13,7 @@ const RegisterForm = () => {
   const [password, setPassword] = useState('');
   return (
     <View className="flex-1">
-      <View className="gap-2">
+      <View className="mb-4 gap-2">
         <Text variant="largeTitle" testID="form-title" className="">
           Let's get started!
         </Text>
