@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, StyleSheet, StatusBar, Platform } from 'react
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import { Avatar, AvatarFallback, AvatarImage } from '@/ui/Avatar';
+import { GiftIcon, EyeOpenIcon, BellIcon } from '@/ui/icons';
 
 const TWITTER_AVATAR_URI =
   'https://pbs.twimg.com/profile_images/1782428433898708992/1voyv4_A_400x400.jpg';
@@ -29,6 +30,17 @@ const CustomHeader: React.FC<ICustomHeader> = ({ user }) => {
     console.log('Open Drawer');
   };
 
+  const toggleAmountVisible = () => {
+    console.log('Toggle Amount Visibility');
+  };
+
+  const openNotification = () => {
+    console.log('open Notification');
+  };
+  const getGift = () => {
+    console.log('open Gift');
+  };
+
   return (
     <SafeAreaView>
       <View style={styles.container}>
@@ -37,6 +49,26 @@ const CustomHeader: React.FC<ICustomHeader> = ({ user }) => {
             <UserAvatar name={user} />
           </TouchableOpacity>
           <Text className="font-semibold">Hey,{user}</Text>
+        </View>
+        <View className="flex flex-row items-center gap-2">
+          <View className="items-center">
+            <TouchableOpacity onPress={toggleAmountVisible}>
+              <EyeOpenIcon />
+            </TouchableOpacity>
+          </View>
+          <View>
+            <TouchableOpacity onPress={getGift}>
+              <View className="flex flex-row items-center gap-2 rounded-full bg-primary-50 px-2 py-2 ">
+                <GiftIcon />
+                <Text className="font-semibold text-primary-600">Get $10</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <TouchableOpacity onPress={openNotification}>
+              <BellIcon />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>

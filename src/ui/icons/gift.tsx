@@ -1,6 +1,6 @@
 import Svg, { Path, SvgProps } from 'react-native-svg';
 
-export default function GiftICon(props: SvgProps) {
+export default function GiftIcon(props: SvgProps) {
   return (
     <Svg width={16} height={16} viewBox="0 0 16 16" fill="none" {...props}>
       <Path
