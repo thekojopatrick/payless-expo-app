@@ -21,7 +21,7 @@ const RecentTransactions: React.FC<IRecentTransaction> = ({ data }) => {
         <FlatList
           data={data}
           contentContainerStyle={{ gap: 12, marginVertical: 16 }}
-          renderItem={({ item, index }) => <TransactionItem key={index} {...item} />}
+          renderItem={({ item }) => <TransactionItem key={item.id} {...item} />}
         />
       </View>
     </View>
