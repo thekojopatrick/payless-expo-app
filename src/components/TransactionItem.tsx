@@ -30,7 +30,7 @@ const CreditAlertIcon = () => {
 const TransactionItem: React.FC<ITransactionItem> = ({ id, name, amount, type, icon, date }) => {
   return (
     <View id={id} className="flex-row justify-between">
-      <View className="flex-row gap-2">
+      <View className="flex-row items-center gap-2">
         <View className="h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-center">
           {icon}
         </View>
