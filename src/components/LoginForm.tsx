@@ -1,4 +1,4 @@
-import { Link, router } from 'expo-router';
+import { Link } from 'expo-router';
 import React, { useState } from 'react';
 import { TextInput, View } from 'react-native';
 
@@ -50,7 +50,7 @@ const LoginForm = () => {
         </View>
         <View className="mt-auto w-full gap-4 text-center">
           <Link replace href={{ pathname: '/(app)/', params: { name: 'Kojo' } }} asChild>
-            <Button title="Continue" onPress={() => router.navigate('/(app)/')} />
+            <Button title="Continue" onPress={() => {}} />
           </Link>
         </View>
         <View className="my-2 text-center">

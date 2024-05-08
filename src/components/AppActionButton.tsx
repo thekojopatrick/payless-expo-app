@@ -18,7 +18,7 @@ const AppActionButton: React.FC<IAppActionButton> = ({ title, icon, path }) => {
       <Pressable onPress={onMenuPressed}>
         <View className="flex items-center gap-2">
           <View className="items-center rounded-md bg-primary-50 p-4">{icon}</View>
-          <Text className="font-medium">{title}</Text>
+          <Text className="text-center font-medium">{title}</Text>
         </View>
       </Pressable>
     </Link>

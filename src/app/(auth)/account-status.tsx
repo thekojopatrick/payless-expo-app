@@ -1,4 +1,4 @@
-import { Link, Stack, router } from 'expo-router';
+import { Link, Stack } from 'expo-router';
 import { View, Text } from 'react-native';
 
 import { Button } from '@/components/Button';
@@ -25,7 +25,7 @@ export default function AccountCreated() {
           </View>
           <View className="mt-auto w-full gap-4 text-center">
             <Link replace href={{ pathname: '/(app)/', params: { name: 'Kojo' } }} asChild>
-              <Button title="Continue" onPress={() => router.navigate('/(app)/')} />
+              <Button title="Continue" onPress={() => {}} />
             </Link>
           </View>
         </View>

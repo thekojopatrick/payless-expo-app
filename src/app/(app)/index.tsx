@@ -8,7 +8,7 @@ import { ScreenContent } from '@/components/ScreenContent';
 import { QRCodeIcon, HistoryIcon, ArrowUpIcon, ArrowDownIcon, UsersIcon } from '@/ui/icons';
 
 const appRoutes = [
-  { title: 'Scan to pay', path: '/(app)/', icon: <QRCodeIcon /> },
+  { title: 'Scan to pay', path: '/(app)/scan-code', icon: <QRCodeIcon /> },
   { title: 'Send', path: '/(app)/', icon: <ArrowUpIcon /> },
   { title: 'Receive', path: '/(app)/', icon: <ArrowDownIcon /> },
   { title: 'History', path: '/(app)/', icon: <HistoryIcon /> },
