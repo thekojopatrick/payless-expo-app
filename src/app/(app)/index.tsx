@@ -1,6 +1,7 @@
 import { Stack, useLocalSearchParams } from 'expo-router';
+import { View } from 'react-native';
 
-import { Container } from '@/components/Container';
+import AccountBalanceCard from '@/components/AccountBalanceCard';
 import CustomHeader from '@/components/CustomHeader';
 import { ScreenContent } from '@/components/ScreenContent';
 
@@ -11,9 +12,10 @@ export default function Home() {
       <Stack.Screen
         options={{ title: 'Home', header: () => <CustomHeader user={name as string} /> }}
       />
-      <Container>
+      <View className="flex flex-1 gap-2 p-4">
+        <AccountBalanceCard />
         <ScreenContent path="app/index.tsx" title={`Showing details for user ${name}`} />
-      </Container>
+      </View>
     </>
   );
 }
