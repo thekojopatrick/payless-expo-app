@@ -37,16 +37,18 @@ const textVariants = cva('text-foreground', {
 
 const TextClassContext = React.createContext<string | undefined>(undefined);
 
-function Text({
-  className,
-  variant,
-  color,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof RNText> & VariantProps<typeof textVariants>) {
+const Text = React.forwardRef<
+  RNText,
+  React.ComponentPropsWithoutRef<typeof RNText> & VariantProps<typeof textVariants>
+>(({ className, variant, color, ...props }, ref) => {
   const textClassName = React.useContext(TextClassContext);
   return (
-    <RNText className={cn(textVariants({ variant, color }), textClassName, className)} {...props} />
+    <RNText
+      ref={ref}
+      className={cn(textVariants({ variant, color }), textClassName, className)}
+      {...props}
+    />
   );
-}
+});
 
 export { Text, TextClassContext, textVariants };
