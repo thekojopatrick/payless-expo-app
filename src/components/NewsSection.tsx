@@ -17,11 +17,16 @@ const NewsSection: React.FC<INewsSection> = ({ data }) => {
           <AntDesign name="close" size={24} color="black" />
         </Pressable>
       </View>
-      <View className="flex">
+      <View className=" flex">
         <FlatList
           horizontal
           data={data}
-          contentContainerStyle={{ gap: 10, paddingVertical: 10 }}
+          contentContainerStyle={{
+            gap: 10,
+            paddingVertical: 12,
+            marginVertical: 12,
+            //borderWidth: 1,
+          }}
           renderItem={({ item, index }) => <NewsItem key={index} {...item} />}
         />
       </View>

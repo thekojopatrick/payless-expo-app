@@ -17,9 +17,17 @@ const appRoutes = [
 ];
 
 const newsData = [
-  { title: 'The Ghana stock exchange listed', link: '' },
-  { title: 'Bitcoin is on the rise again', link: '' },
-  { title: 'Tips to save and invest', link: '' },
+  {
+    title: 'The Ghana stock exchange listed',
+    link: '',
+    image: require('../../../assets/image-01.png'),
+  },
+  {
+    title: 'Bitcoin is on the rise again',
+    link: '',
+    image: require('../../../assets/image-02.png'),
+  },
+  { title: 'Tips to save and invest', link: '', image: require('../../../assets/image-03.png') },
 ];
 
 export default function Home() {
