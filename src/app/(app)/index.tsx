@@ -1,3 +1,4 @@
+import { Feather } from '@expo/vector-icons';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import { View } from 'react-native';
 
@@ -5,7 +6,7 @@ import AccountBalanceCard from '@/components/AccountBalanceCard';
 import AppMainMenu from '@/components/AppMainMenu';
 import CustomHeader from '@/components/CustomHeader';
 import NewsSection from '@/components/NewsSection';
-import { ScreenContent } from '@/components/ScreenContent';
+import RecentTransactions from '@/components/RecentTransactions';
 import { QRCodeIcon, HistoryIcon, ArrowUpIcon, ArrowDownIcon, UsersIcon } from '@/ui/icons';
 
 const appRoutes = [
@@ -30,6 +31,81 @@ const newsData = [
   { title: 'Tips to save and invest', link: '', image: require('../../../assets/image-03.png') },
 ];
 
+const transactions = [
+  {
+    id: '001',
+    name: 'Melcom',
+    icon: <Feather name="shopping-cart" size={24} color="black" />,
+    date: 'October 8th,2023',
+    amount: 5674.98,
+    type: 'Debit',
+  },
+  {
+    id: '002',
+    name: 'Chris T.',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'October 8th,2023',
+    amount: 250.0,
+    type: 'Credit',
+  },
+  {
+    id: '003',
+    name: 'Rent to LandLord',
+    icon: <Feather name="home" size={24} color="black" />,
+    date: 'April 16th, 2024',
+    amount: 300.0,
+    type: 'Debit',
+  },
+  {
+    id: '004',
+    name: 'Turbonet',
+    icon: <Feather name="wifi" size={24} color="black" />,
+    date: 'May 12th, 2024',
+    amount: 50.5,
+    type: 'Debit',
+  },
+  {
+    id: '005',
+    name: 'Nana Ekow',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'May 19th, 2024',
+    amount: 1000,
+    type: 'Credit',
+  },
+  {
+    id: '006',
+    name: 'Micheal Sasu',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'May 19th, 2024',
+    amount: 1000,
+    type: 'Credit',
+  },
+  {
+    id: '007',
+    name: 'Lawrence Deku',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'May 19th, 2024',
+    amount: 1000,
+    type: 'Credit',
+  },
+  {
+    id: '008',
+    name: 'Kevin',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'May 19th, 2024',
+    amount: 1000,
+    type: 'Credit',
+  },
+  {
+    id: '009',
+    name: 'Kwaku Jonathan',
+    icon: <Feather name="user" size={24} color="black" />,
+    date: 'May 19th, 2024',
+    amount: 1000,
+    type: 'Credit',
+  },
+];
+
 export default function Home() {
   const { name } = useLocalSearchParams();
   return (
@@ -41,7 +117,7 @@ export default function Home() {
         <AccountBalanceCard />
         <AppMainMenu data={appRoutes} />
         <NewsSection data={newsData} />
-        <ScreenContent path="app/index.tsx" title={`Showing details for user ${name}`} />
+        <RecentTransactions data={transactions} />
       </View>
     </>
   );
