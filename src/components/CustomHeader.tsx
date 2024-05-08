@@ -42,7 +42,7 @@ const CustomHeader: React.FC<ICustomHeader> = ({ user }) => {
   };
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
         <View className="flex flex-row items-center gap-2">
           <TouchableOpacity onPress={openDrawer}>
@@ -77,7 +77,7 @@ const CustomHeader: React.FC<ICustomHeader> = ({ user }) => {
 
 const styles = StyleSheet.create({
   safeArea: {
-    flex: 1,
+    //flex: 1,
     // backgroundColor: Colors.light.background,
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },

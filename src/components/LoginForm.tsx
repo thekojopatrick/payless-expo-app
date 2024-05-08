@@ -48,11 +48,11 @@ const LoginForm = () => {
             autoCapitalize="none"
           />
         </View>
-        <Button
-          className="mt-auto"
-          title="Continue"
-          onPress={() => router.push('/account-status')}
-        />
+        <View className="mt-auto w-full gap-4 text-center">
+          <Link replace href={{ pathname: '/(app)/', params: { name: 'Kojo' } }} asChild>
+            <Button title="Continue" onPress={() => router.navigate('/(app)/')} />
+          </Link>
+        </View>
         <View className="my-2 text-center">
           <Link href="/modal" asChild>
             <Text variant="subhead" className="text-center font-medium text-primary-600 underline">
